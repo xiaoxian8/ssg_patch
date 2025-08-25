@@ -1,5 +1,5 @@
---- common/block/elevator.c	2025-08-02 05:06:24.868708507 +0800
-+++ oneplus/block/elevator.c	2025-08-02 04:31:52.402649110 +0800
+--- a/block/elevator.c	2025-08-02 05:06:24.868708507 +0800
++++ b/block/elevator.c	2025-08-02 04:31:52.402649110 +0800
 @@ -642,7 +642,11 @@
  	    !blk_mq_is_shared_tags(q->tag_set->flags))
  		return NULL;
@@ -12,8 +12,8 @@
  }
  
  /*
---- common/block/Makefile	2025-08-02 05:06:24.856707893 +0800
-+++ oneplus/block/Makefile	2025-08-02 04:31:52.386648292 +0800
+--- a/block/Makefile	2025-08-02 05:06:24.856707893 +0800
++++ b/block/Makefile	2025-08-02 04:31:52.386648292 +0800
 @@ -25,6 +25,9 @@
  obj-$(CONFIG_MQ_IOSCHED_KYBER)	+= kyber-iosched.o
  bfq-y				:= bfq-iosched.o bfq-wf2q.o bfq-cgroup.o
@@ -24,8 +24,8 @@
  
  obj-$(CONFIG_BLK_DEV_INTEGRITY) += bio-integrity.o blk-integrity.o
  obj-$(CONFIG_BLK_DEV_INTEGRITY_T10)	+= t10-pi.o
---- common/block/Kconfig.iosched	2025-08-02 05:06:24.856707893 +0800
-+++ oneplus/block/Kconfig.iosched	2025-08-02 04:31:52.382648086 +0800
+--- a/block/Kconfig.iosched	2025-08-02 05:06:24.856707893 +0800
++++ b/block/Kconfig.iosched	2025-08-02 04:31:52.382648086 +0800
 @@ -43,4 +43,18 @@
  	Enable some debugging help. Currently it exports additional stat
  	files in a cgroup which can be useful for debugging.
